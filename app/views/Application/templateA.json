@@ -1,0 +1,5 @@
+{
+	"id": "${id}",
+#{list items:test, as:'test'}
+	#{include 'Application/templateB.json'/}
+#{/list}

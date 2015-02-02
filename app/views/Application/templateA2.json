@@ -1,0 +1,3 @@
+{
+	"id": "${id}",
+	#{include 'Application/templateB2.json'/}

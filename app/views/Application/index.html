@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>Test page</title>
+		<script type="text/javascript" src="@{'/public/javascripts/jquery-1.6.4.min.js'}"></script>
+		<script type="text/javascript" src="@{'/public/javascripts/test.js'}"></script>
+	</head>
+	<body>
+		<section style="height: 50%">
+			<section style="height: 100%;width: 25%;float: left;padding: 5px;box-sizing: border-box;">
+				<div style="margin-top: 20px; height: 50px; text-align: center">
+					<input type="button" id="A" value="Case A"/>
+				</div>
+				<span>Render template A with a include on template B, which uses a set and include on template B.</span>
+			</section>
+			<section style="height: 100%;width: 25%;float: left;padding: 5px;box-sizing: border-box;">
+				<div style="margin-top: 20px; height: 50px; text-align: center">
+					<input type="button" id="B" value="Case B"/>
+				</div>
+				<span>Render template B with a set and include on template B.</span>
+			</section>
+			<section style="height: 100%;width: 25%;float: left;padding: 5px;box-sizing: border-box;">
+				<div style="margin-top: 20px; height: 50px; text-align: center">
+					<input type="button" id="C" value="Case C"/>
+				</div>
+				<span>Render template A2 with a include on template B2, which uses a list and include on template B2.</span>
+			</section>
+			<section style="height: 100%;width: 25%;float: left;padding: 5px;box-sizing: border-box;">
+				<div style="margin-top: 20px; height: 50px; text-align: center">
+					<input type="button" id="D" value="Case D"/>
+				</div>
+				<span>Render template B2 with the list directly manipulating the variable and a include on template B2.</span>
+			</section>
+		</section>
+		<section style="height: 50%;padding: 10px;box-sizing: border-box;">
+			Result: <code id="result"></code>
+		</section>
+	</body>
+</html>

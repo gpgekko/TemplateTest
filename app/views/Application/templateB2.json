@@ -1,0 +1,12 @@
+#{if id == "D" && test.id == "Parent"}
+{
+#{/if}
+	"eid": "${test.id}",
+	"children":
+	[
+	#{list test?.children, as:'test'}
+		{
+		#{include 'Application/templateB2.json'/}
+	#{/list}
+	]
+}
