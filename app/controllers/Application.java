@@ -13,26 +13,30 @@ public class Application extends Controller {
         render();
     }
 	
-	public static void cases(String id) {
-		TreeItem[] test = new TreeItem[1];
+	public static void cases(String id, boolean noIncludes) {
 		TreeItem test2 = new TreeItem("Parent");
 		test2.children.add(new TreeItem("Child"));
-		test[0] = test2;
 		if(id.equals("A"))
 		{
-			renderTemplate("Application/templateA.json", test, id);
+			TreeItem[] test = new TreeItem[1];
+			test[0] = test2;
+			renderTemplate("Application/templateA.json", test, id, noIncludes);
 		}
 		else if(id.equals("B"))
 		{
-			renderTemplate("Application/templateB.json", test, id);
+			TreeItem test = test2;
+			renderTemplate("Application/templateB.json", test, id, noIncludes);
 		}
 		else if(id.equals("C"))
 		{
-			renderTemplate("Application/templateA2.json", test, id);
+			TreeItem[] test = new TreeItem[1];
+			test[0] = test2;
+			renderTemplate("Application/templateA2.json", test, id, noIncludes);
 		}
 		else if(id.equals("D"))
 		{
-			renderTemplate("Application/templateB2.json", test, id);
+			TreeItem test = test2;
+			renderTemplate("Application/templateB2.json", test, id, noIncludes);
 		}
 	}
 

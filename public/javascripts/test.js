@@ -1,7 +1,10 @@
 $(function() {
-	$('input').click(function() {
+	$('input[type="button"]').click(function() {
 		$("#result").text("");
 		$.ajax({
+			data: {
+				noIncludes: $("#noIncludes").is(":checked")
+			},
 			dataType: "json",
 			type: "GET",
 			url: "/case/" + this.id

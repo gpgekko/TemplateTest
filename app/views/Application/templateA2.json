@@ -1,3 +1,9 @@
 {
 	"id": "${id}",
+	"resources":
+	[
+#{list items:test, as:'test'}
 	#{include 'Application/templateB2.json'/}
+#{/list}
+	]
+}
